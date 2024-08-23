@@ -21,4 +21,13 @@ class Practico1Controller extends Controller
         return view('practico1', ['result' => $promedio]);
     }
 
+    public function contacto(Request $request){
+        $nombre = $request->input('nombre');
+        $apellido = $request->input('apellido');
+        $telefono = $request->input('telefono');
+        $correo_electronico = $request->input('correo_electronico');
+
+        return view('practico1', ['nombre' => $nombre, 'apellido' =>  $apellido, 'correo_electronico' => $correo_electronico, 'telefono' => $telefono]);
+    }
+
 }
